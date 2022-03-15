@@ -1,0 +1,28 @@
+.pagination {
+  .page-item {
+
+    .page-link {
+      border: none;
+      color: white;
+      box-shadow: none;
+    }
+    
+    &:nth-child(odd) {
+      .page-link {
+        background-color: #212529;
+      }
+    }
+
+    &:nth-child(even) {
+      .page-link {
+        background-color: #2c3034;
+      }
+    }
+
+    &.active {
+      .page-link {
+        background-color: goldenrod;
+      }
+    }
+  }
+}
