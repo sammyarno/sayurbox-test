@@ -28,3 +28,30 @@ export const GET_PAGE_DATA = gql`
     }
   }
 `;
+
+export const GET_STAFF_DATA = gql`
+  query StaffDetail($id: Int!) {
+    Staff(id: $id) {
+      id
+      name {
+        full
+        userPreferred
+      }
+      languageV2
+      gender
+      dateOfBirth {
+        year
+        month
+        day
+      }
+      homeTown
+      primaryOccupations
+      languageV2
+      image {
+        medium
+      }
+      bloodType
+      siteUrl
+    }
+  }
+`;

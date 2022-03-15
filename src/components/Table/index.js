@@ -1,8 +1,8 @@
-import { array, bool } from "prop-types";
+import { array, bool, func } from "prop-types";
 import { Button, Placeholder, Table } from "react-bootstrap";
 import "./styles.scss";
 
-const TableData = ({ data, loading }) => (
+const TableData = ({ data, loading, onClickDetail }) => (
   <Table variant="dark" striped bordered hover className="staff-table">
     <thead>
       <tr>
@@ -53,7 +53,7 @@ const TableData = ({ data, loading }) => (
           <td>{staff.dateOfBirth}</td>
           <td>{staff.primaryOccupations.join(", ")}</td>
           <td>
-            <Button variant="outline-warning">See Detail</Button>
+            <Button variant="outline-warning" onClick={e => onClickDetail(e, staff.id)}>See Detail</Button>
           </td>
         </tr>
       ))}
@@ -64,6 +64,7 @@ const TableData = ({ data, loading }) => (
 TableData.propTypes = {
   data: array.isRequired,
   loading: bool.isRequired,
+  onClickDetail: func.isRequired,
 };
 
 export default TableData;

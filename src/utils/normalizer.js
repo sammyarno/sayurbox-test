@@ -24,3 +24,12 @@ export const normalizePageData = (raw) => {
 
   return result;
 };
+
+export const normalizeStaffDetail = (raw) => {
+  if (!raw) return {};
+  
+  return {
+    ...raw.Staff,
+    dateOfBirth: `${raw.Staff.dateOfBirth.month}/${raw.Staff.dateOfBirth.day}/${raw.Staff.dateOfBirth.year}`,
+  };
+};
