@@ -5,14 +5,20 @@ import { normalizePageData } from "../utils/normalizer";
 const usePageData = (props) => {
   const { page = 1, perPage = 5 } = props;
 
-  const { data, loading, error } = useQuery(GET_PAGE_DATA, {
+  const { data, loading, error, refetch } = useQuery(GET_PAGE_DATA, {
     variables: {
       page,
       perPage,
     },
   });
 
-  return { data: normalizePageData(data), loading, error };
+  const fetchMore = newVariables => {
+    refetch({
+      ...newVariables
+    });
+  }
+
+  return { data: normalizePageData(data), loading, error, fetchMore };
 };
 
 export default usePageData;
