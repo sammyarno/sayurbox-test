@@ -1,23 +1,13 @@
+import usePageData from "../../hooks/usePageData";
 import "./styles.scss";
 
 const App = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const { data, loading, error } = usePageData({
+    page: 1,
+    perPage: 5,
+  });
+
+  return <div className="home">dashboard</div>;
 };
 
 export default App;
