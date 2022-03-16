@@ -58,7 +58,7 @@ const DetailModal = ({ show, onHide, data }) => (
 DetailModal.propTypes = {
   show: bool.isRequired,
   onHide: func.isRequired,
-  data: object.isRequired,
+  data: object,
 };
 
 export default DetailModal;
