@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/sayurbox-test/static/css/main.3e85a303.css",
+    "main.js": "/sayurbox-test/static/js/main.2eba6888.js",
+    "index.html": "/sayurbox-test/index.html",
+    "main.3e85a303.css.map": "/sayurbox-test/static/css/main.3e85a303.css.map",
+    "main.2eba6888.js.map": "/sayurbox-test/static/js/main.2eba6888.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3e85a303.css",
+    "static/js/main.2eba6888.js"
+  ]
+}
