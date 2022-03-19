@@ -1,6 +1,6 @@
 # Personal Project
 
-This project is a personal project for `Frontend Engineer` in Ajaib. This project features are:
+This project is a personal project for `Frontend Engineer` for Sayurbox. This project features are:
 
 - [x] Get data from API and porting to usable table data
 - [x] Check user detail
